@@ -20,12 +20,12 @@ include("koneksi.php");
   <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* Background Gambar */
     body {
-      background-image: url('img/background.jpg'); /* Ganti dengan path gambar yang Anda inginkan */
-      background-size: cover; /* Agar gambar menutupi seluruh area */
-      background-repeat: no-repeat; /* Agar gambar tidak diulang */
-      background-attachment: fixed; /* Agar gambar tetap pada tempatnya saat halaman digulir */
+      background-image: url('img/background.jpg'); 
+      background-size: cover; 
+      background-repeat: no-repeat; 
+      background-attachment: fixed; 
+      font-family: 'Roboto', sans-serif;
     }
 
     .animated {
@@ -67,14 +67,11 @@ include("koneksi.php");
     <div class="main_menu">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container box_1620">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt="Logo"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav justify-content-end">
               <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
@@ -196,4 +193,6 @@ include("koneksi.php");
   <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
   <script src="js/jquery.ajaxchimp.min.js"></script>
-  <script src="js/mail-script.js
+  <script src="js/mail-script.js"></script>
+</body>
+</html>
