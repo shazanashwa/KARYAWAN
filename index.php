@@ -367,7 +367,6 @@
           <div class="additional-logos">
             <img src="img/skkmigas.png" alt="Additional Logo 1">
           </div>
-=======
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
