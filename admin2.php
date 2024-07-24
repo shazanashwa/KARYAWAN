@@ -208,7 +208,7 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="header-wrap">
-                            <h1>SIKaryawan</h1>
+                            <h1>PT. BSP </h1>
                           
                         </div>
                     </div>
