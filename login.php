@@ -19,6 +19,17 @@
       align-items: center;
       height: 100vh;
       margin: 0;
+      position: relative; /* Untuk positioning overlay */
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5); /* Warna overlay dengan opacity 50% */
+      z-index: 1; /* Memastikan overlay di atas latar belakang */
     }
 
     .main-w3layouts {
@@ -29,6 +40,8 @@
       width: 100%;
       max-width: 400px;
       text-align: center;
+      position: relative; /* Untuk positioning di atas overlay */
+      z-index: 2; /* Memastikan form di atas overlay */
     }
 
     h1 {
@@ -48,12 +61,12 @@
     }
 
     .text:focus {
-      border-color: #ff9933; /* Border oranye saat fokus */
+      border-color: red; 
       outline: none;
     }
 
     input[type="submit"] {
-      background: #ff9933; /* Tombol oranye */
+      background: red; 
       color: white;
       padding: 15px;
       border: none;
@@ -74,6 +87,7 @@
   </style>
 </head>
 <body>
+  <div class="overlay"></div> <!-- Tambahkan elemen overlay -->
   <div class="main-w3layouts wrapper">
     <h1>Login Admin</h1>
     <div class="main-agileinfo">
