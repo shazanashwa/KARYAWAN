@@ -354,14 +354,45 @@
       color: white; 
       transform: scale(1.05); 
       box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3); 
-    } 
-    #notification {
-      display: none;
-      color: green;
-      font-weight: bold;
-      text-align: center;
-      margin-top: 20px;
-    } 
+    }  
+    .footer {
+      background: #343a40;
+      color: white;
+      padding: 10px 0;
+      position: relative;
+    }
+
+    .footer .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+
+    .footer .social-icons {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    .footer .social-icons li {
+      margin: 0 -2px;
+    }
+
+    .footer .social-icons li a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .footer .social-icons li a:hover {
+      color: #B31312;
+    }
   </style> 
 </head> 
 <body> 
@@ -462,16 +493,18 @@
           </div> 
           <button type="submit" class="btn btn-primary">Kirim Pesan</button> 
         </form> 
-      </div> 
       <div id="notification"></div>
- 
-      <!-- Google Maps Embed --> 
-      <div class="contact-map"> 
-        <iframe src="https://maps.app.goo.gl/RYJJvmPAaxPMcqcg8" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe> 
-      </div> 
     </div> 
   </div> 
 </section> 
+<footer class="footer"> 
+  <div class="container"> 
+    <p>&copy; 2024 PT. Bumi Siak Pusako</p> 
+    <ul class="social-icons">
+      <li><a href="https://www.instagram.com/bumisiakpusako?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+  </div> 
+</footer>
   <!--================ Contact Section end =================--> 
  
   <script src="vendors/jquery/jquery-3.2.1.min.js"></script> 
@@ -481,3 +514,5 @@
   <script src="js/mail-script.js"></script> 
 </body> 
 </html>
+
+ 

@@ -11,7 +11,7 @@
     echo "<div align='center'>username belum terdaftar! <a href='login.php'>back</a></div>";
   }else{
     if ($password <> $hasil['password']) {
-      echo "<div align='center'>password salah! <a href='login.php'>back</a></div>";
+      echo "<div align='center'>password anda salah! <a href='login.php'>back</a></div>";
     }else{
       $_SESSION['username'] = $hasil['username'];
        header('location:admin2.php');

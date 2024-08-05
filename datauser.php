@@ -48,6 +48,10 @@ error_reporting(0);
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- end script-->
+
+    <style>
+        
+        </style>
 </head>
 
 <body class="animsition">
@@ -99,15 +103,7 @@ error_reporting(0);
                             <a href="datajabatan.php">
                                 <i class="far fa-check-square"></i>Data Jabatan</a>
                         </li>
-                        <li>
-                            <a href="data_absen.php">
-                                <i class="fas fa-calendar-alt"></i>Data Absen</a>
-                        </li>
-                       <li>
-                            <a href="data_keterangan.php">
-                                <i class="fas fa-table"></i>data Keterangan
-                            </a>
-                        </li>
+                       
                        
                        
                     </ul>
@@ -143,15 +139,7 @@ error_reporting(0);
                             <a href="datajabatan.php">
                                 <i class="far fa-check-square"></i>Data Jabatan</a>
                         </li>
-                        <li>
-                            <a href="data_absen.php">
-                                <i class="fas fa-calendar-alt"></i>Data Absen</a>
-                        </li>
-                        <li>
-                            <a href="data_keterangan.php">
-                                <i class="fas fa-table"></i>data Keterangan
-                            </a>
-                        </li>
+                        
                         <!--<li>
                             <a href="map.html">
                                 <i class="fas fa-map-marker-alt"></i>Maps</a>

@@ -33,6 +33,68 @@
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
 
+    <style>
+        .stat-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        .stat-card h3 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .stat-card p {
+            margin: 0;
+            font-size: 1.2em;
+            color: #777;
+        }
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin-top: 30px;
+        }
+        .footer {
+            background: #343a40;
+            color: white;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        .footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .footer .social-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .footer .social-icons li {
+            margin: 0 5px;
+        }
+
+        .footer .social-icons li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .footer .social-icons li a:hover {
+            color: #B31312;
+        }
+    </style>
 </head>
 
 <body class="animsition">
@@ -40,7 +102,7 @@
     session_start();
     if (!isset($_SESSION['username'])) {
         header("location: index.php");
-    }else {
+    } else {
         $username = $_SESSION['username'];  
     }
     ?>
@@ -51,7 +113,7 @@
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
                         <a class="" href="index.html">
-                          
+                            <!-- Logo can be added here -->
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -67,54 +129,6 @@
                         <li class="has-sub">
                             <a class="js-arrow" href="admin2.php">
                                 <i class="fas fa-tachometer-alt"></i>Beranda</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="datakaryawan.php">
-                                <i class="fas fa-chart-bar"></i>Data Karyawan</a>
-                        </li>
-                        <li>
-                            <a href="datauser.php">
-                                <i class="fas fa-table"></i>Data user</a>
-                        </li>
-                        <li>
-                            <a href="datajabatan.php">
-                                <i class="far fa-check-square"></i>Data Jabatan</a>
-                        </li>
-                        <li>
-                            <a href="data_absen.php">
-                                <i class="fas fa-calendar-alt"></i>Data Absen</a>
-                        </li>
-                       <li>
-                            <a href="data_keterangan.php">
-                                <i class="fas fa-table"></i>data Keterangan
-                            </a>
-                        </li>
-                       
-                       
-                    </ul>
-                </div>
-            </nav>
-
-        </header>
-        <!-- END HEADER MOBILE-->
-
-        <!-- MENU SIDEBAR-->
-        <aside class="menu-sidebar d-none d-lg-block">
-            <div class="logo">
-                <a href="#">
-                   <h2>Admin</h2>
-                </a>
-            </div>
-            <div class="menu-sidebar__content js-scrollbar1">
-                <nav class="navbar-sidebar">
-                    <ul class="list-unstyled navbar__list">
-                        <li class="active has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>Beranda</a>
-                          
                         </li>
                         <li>
                             <a href="datakaryawan.php">
@@ -128,13 +142,37 @@
                             <a href="datajabatan.php">
                                 <i class="far fa-check-square"></i>Data Jabatan</a>
                         </li>
-                        <li>
-                            <a href="data_absen.php">
-                                <i class="fas fa-calendar-alt"></i>Data Absen</a>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- END HEADER MOBILE-->
+
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                <a href="#">
+                    <h2>Admin</h2>
+                </a>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                        <li class="active has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-tachometer-alt"></i>Beranda</a>
                         </li>
                         <li>
-                            <a href="data_keterangan.php">
-                                <i class="fas fa-map-marker-alt"></i>Data Keterangan</a>
+                            <a href="datakaryawan.php">
+                                <i class="fas fa-chart-bar"></i>Data Karyawan</a>
+                        </li>
+                        <li>
+                            <a href="datauser.php">
+                                <i class="fas fa-table"></i>Data User</a>
+                        </li>
+                        <li>
+                            <a href="datajabatan.php">
+                                <i class="far fa-check-square"></i>Data Jabatan</a>
                         </li>
                         <li>
                             <a href="logout.php">Logout</a>
@@ -152,7 +190,7 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="header-wrap">
-                            <h1>PT. BSP </h1>
+                            <h1>PT. BSP</h1>
                         </div>
                     </div>
                 </div>
@@ -163,16 +201,57 @@
             <div class="main-content">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
+                        <!-- Statistic Cards Section -->
                         <div class="row">
-                            <center><img src="img/karyawan.png" width="500" class="img img-responsive" height="500"></center>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="stat-card">
+                                    <h3>242</h3>
+                                    <p>Total Data Pegawai Tetap</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="stat-card">
+                                    <h3>27</h3>
+                                    <p>Total Data Pegawai Kontrak</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="stat-card">
+                                    <h3>227</h3>
+                                    <p>Total Pegawai Laki-Laki</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="stat-card">
+                                    <h3>49</h3>
+                                    <p>Total Pegawai Perempuan</p>
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- Chart Section -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h2>Selamat Datang, <?php echo $username; ?>!</h2>
+                                        <p>Ini adalah halaman beranda sistem kepegawaian PT. BSP. Anda dapat mengakses berbagai data kepegawaian seperti data karyawan, data user, dan data jabatan dari menu di sebelah kiri.</p>
+
+                                        <!-- Bar Chart -->
+                                        <div class="chart-container">
+                                            <canvas id="barChart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
             <!-- END MAIN CONTENT-->
-            <!-- END PAGE CONTAINER-->
         </div>
-
+        <!-- END PAGE CONTAINER-->
     </div>
 
     <!-- Jquery JS-->
@@ -195,7 +274,60 @@
     <!-- Main JS-->
     <script src="js/main.js"></script>
 
+    <!-- Custom JS for Chart -->
+    <script>
+        var ctx = document.getElementById('barChart').getContext('2d');
+        var barChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['S1', 'Akademi', 'SMA/SMK', 'SD/SMP'],
+                datasets: [{
+                    label: 'Jumlah',
+                    data: [161, 27, 60, 0],
+                    backgroundColor: [
+                        '#4D869C', '#7AB2B2', '#ACE2E1', '#86B6F6', '#B4D4FF' 
+                    ],
+                    borderColor: [
+                        '#4D869C', '#7AB2B2', '#ACE2E1', '#86B6F6', '#B4D4FF'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        labels: {
+                            boxWidth: 20,
+                            padding: 15,
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ' + context.raw;
+                            }
+                        }
+                    }
+                },
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    </script>
 </body>
-
+<footer class="footer"> 
+  <div class="container"> 
+    <p>&copy; 2024 PT. Bumi Siak Pusako</p> 
+    <ul class="social-icons">
+      <li><a href="https://www.instagram.com/bumisiakpusako?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+  </div> 
+</footer>
 </html>
-<!-- end document-->
