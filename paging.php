@@ -44,8 +44,8 @@ while ($row=mysqli_fetch_array($data_karyawan)) {
                                                 <td><?php echo $row['tmp_tgl_lahir']; ?></td>
                                                 <td><?php echo $row['jenkel']; ?></td>
                                                 <td><?php echo $row['agama']; ?></td>
-                                                <td><?php echo $row['alamat']; ?></td>
-                                                <td><?php echo $row['no_tel']; ?></td>
+                                                <td><?php echo $row['department']; ?></td>
+                                                <td><?php echo $row['tgl_masuk']; ?></td>
                                                 <td><?php echo $row['jabatan']; ?></td>
                                                     <td><img src="images/<?php echo $row['foto'];?>" ></td>
 

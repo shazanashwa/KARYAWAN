@@ -10,8 +10,8 @@ if (isset($_POST['simpan'])) {
 	$tmp_tgl_lahir = $_POST['tmp_tgl_lahir'];
 	$jenkel = $_POST['jenkel'];
 	$agama = $_POST['agama'];
-	$alamat = $_POST['alamat'];
-	$no_tel = $_POST['no_tel'];
+	$department = $_POST['department'];
+	$tgl_masuk = $_POST['tgl_masuk'];
 	$jabatan = $_POST['jabatan'];
 
 

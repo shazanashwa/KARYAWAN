@@ -103,7 +103,10 @@ error_reporting(0);
                             <a href="datajabatan.php">
                                 <i class="far fa-check-square"></i>Data Jabatan</a>
                         </li>
-                       
+                        <li>
+                            <a href="datakarir.php">
+                                <i class="far fa-suitcase"></i>Data Karir</a>
+                        </li>
                        
                        
                     </ul>
@@ -139,7 +142,10 @@ error_reporting(0);
                             <a href="datajabatan.php">
                                 <i class="far fa-check-square"></i>Data Jabatan</a>
                         </li>
-                        
+                        <li>
+                            <a href="datakarir.php">
+                                <i class="far fa-suitcase"></i>Data Karir</a>
+                        </li>
                         <!--<li>
                             <a href="map.html">
                                 <i class="fas fa-map-marker-alt"></i>Maps</a>

@@ -142,6 +142,10 @@
                             <a href="datajabatan.php">
                                 <i class="far fa-check-square"></i>Data Jabatan</a>
                         </li>
+                        <li>
+                            <a href="datakarir.php">
+                                <i class="far fa-suitcase"></i>Data Karir</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -173,6 +177,10 @@
                         <li>
                             <a href="datajabatan.php">
                                 <i class="far fa-check-square"></i>Data Jabatan</a>
+                        </li>
+                        <li>
+                            <a href="datakarir.php">
+                                <i class="far fa-suitcase"></i>Data Karir</a>
                         </li>
                         <li>
                             <a href="logout.php">Logout</a>
@@ -212,19 +220,19 @@
                             <div class="col-lg-3 col-md-6">
                                 <div class="stat-card">
                                     <h3>27</h3>
-                                    <p>Total Data Pegawai Kontrak</p>
+                                    <p>Total Data Pegawai PWT</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6">
                                 <div class="stat-card">
-                                    <h3>227</h3>
-                                    <p>Total Pegawai Laki-Laki</p>
+                                    <h3>3</h3>
+                                    <p>Total Pegawai Pensiun</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6">
                                 <div class="stat-card">
                                     <h3>49</h3>
-                                    <p>Total Pegawai Perempuan</p>
+                                    <p>Total Pegawai Cuti</p>
                                 </div>
                             </div>
                         </div>
@@ -235,7 +243,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <h2>Selamat Datang, <?php echo $username; ?>!</h2>
-                                        <p>Ini adalah halaman beranda sistem kepegawaian PT. BSP. Anda dapat mengakses berbagai data kepegawaian seperti data karyawan, data user, dan data jabatan dari menu di sebelah kiri.</p>
+                                        <p>Ini adalah Diagram HR Competency Development Activities</p>
 
                                         <!-- Bar Chart -->
                                         <div class="chart-container">
@@ -280,10 +288,10 @@
         var barChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['S1', 'Akademi', 'SMA/SMK', 'SD/SMP'],
+                labels: ['Workshops and Seminars', 'In-House Training', 'Training', 'Sertifikasi'],
                 datasets: [{
                     label: 'Jumlah',
-                    data: [161, 27, 60, 0],
+                    data: [104, 1174, 20, 94],
                     backgroundColor: [
                         '#4D869C', '#7AB2B2', '#ACE2E1', '#86B6F6', '#B4D4FF' 
                     ],

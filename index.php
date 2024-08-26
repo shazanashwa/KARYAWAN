@@ -430,7 +430,7 @@
   <section class="hero-banner"> 
     <div class="container"> 
       <div class="hero-banner__content"> 
-        <h1>Selamat Datang Di<br>PT. Bumi Siak Pusako</h1> 
+        <h1>Selamat Datang Di <br>PT. Bumi Siak Pusako</h1> 
         <p>Memancang Tapak, Mengangkat Marwah</p> 
         <a href="login.php" class="btn btn-primary">Get Started</a> 
       </div> 

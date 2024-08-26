@@ -12,8 +12,8 @@ if (isset($_POST['ubahdata'])) {
   $tmp_tgl_lahir = $_POST['tmp_tgl_lahir'];
   $jenkel = $_POST['jenkel'];
   $agama = $_POST['agama'];
-  $alamat = $_POST['alamat'];
-  $no_tel = $_POST['no_tel'];
+  $department = $_POST['department'];
+  $tgl_masuk = $_POST['tgl_masuk'];
   $jabatan = $_POST['jabatan'];
 
   if(isset($_POST['ubahfoto'])){ // Cek apakah user ingin mengubah fotonya atau tidak
@@ -32,7 +32,7 @@ if (isset($_POST['ubahdata'])) {
       unlink($file);//nama variabel yang ada di server
 
       // Proses ubah data ke Database
-      $sql_f = "UPDATE tb_karyawan set username='$username', password='$password', nama='$nama', tmp_tgl_lahir='$tmp_tgl_lahir', jenkel='$jenkel', agama='$agama', alamat='$alamat', no_tel='$no_tel', jabatan='$jabatan', foto ='$fotobaru' WHERE id_karyawan='$id_karyawan'";
+      $sql_f = "UPDATE tb_karyawan set username='$username', password='$password', nama='$nama', tmp_tgl_lahir='$tmp_tgl_lahir', jenkel='$jenkel', agama='$agama', department='$department', tgl_masuk='$tgl_masuk', jabatan='$jabatan', foto ='$fotobaru' WHERE id_karyawan='$id_karyawan'";
       $ubah  = mysqli_query($koneksi, $sql_f);
       if($ubah){
         echo "<script>alert('Ubah Data Dengan ID Karyawan = ".$id_karyawan." Berhasil') </script>";
@@ -53,7 +53,7 @@ if (isset($_POST['ubahdata'])) {
     }
  } //akhir ubah foto
  else { //hanya untuk mengubah data
-   $sql_d   = "UPDATE tb_karyawan set username='$username', password='$password', nama='$nama', tmp_tgl_lahir='$tmp_tgl_lahir', jenkel='$jenkel', agama='$agama', alamat='$alamat', no_tel='$no_tel', jabatan='$jabatan' WHERE id_karyawan='$id_karyawan'";
+   $sql_d   = "UPDATE tb_karyawan set username='$username', password='$password', nama='$nama', tmp_tgl_lahir='$tmp_tgl_lahir', jenkel='$jenkel', agama='$agama', department='$department', tgl_masuk='$tgl_masuk', jabatan='$jabatan' WHERE id_karyawan='$id_karyawan'";
    $data    = mysqli_query($koneksi, $sql_d);
    if ($data) {
      echo "<script>alert('Ubah Data Dengan ID Karyawan = ".$id_karyawan." Berhasil') </script>";

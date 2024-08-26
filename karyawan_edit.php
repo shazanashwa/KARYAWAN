@@ -108,13 +108,13 @@ session_start();
                                                     </select>
   </div>
     <div class="form-group">
-    <label for="exampleInputPassword1">Alamat</label>
-    <textarea autocomplete="off" class="form-control" name="alamat" value="<?php echo $d['alamat'];?>"></textarea>
+    <label for="exampleInputPassword1">Department</label>
+    <textarea autocomplete="off" class="form-control" name="department" value="<?php echo $d['department'];?>"></textarea>
   
   </div>
     <div class="form-group">
-    <label for="exampleInputPassword1">Telepon</label>
-   <input type="text" class="form-control"  name="no_tel" value="<?php echo $d['no_tel'];?>">
+    <label for="exampleInputPassword1">Tanggal Bergabung</label>
+   <input type="text" class="form-control"  name="tgl_masuk" value="<?php echo $d['tgl_masuk'];?>">
   </div>
     <div class="form-group">
     <label for="exampleInputPassword1">Jabatan</label>
